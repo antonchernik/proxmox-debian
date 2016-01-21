@@ -18,7 +18,7 @@ echo $LOCAL > /etc/timezone && \
 dpkg-reconfigure -f noninteractive tzdata
 
 sed -i -e 's/"syntax on/syntax on\ncolorscheme ron\nset number/' /etc/vim/vimrc
-apt-get -y install bsdutils build-essential libaio1 libssl-dev libcurl4-openssl-dev libevent-dev sendmail-bin sensible-mda
+apt-get -y install bsdutils build-essential libaio1 libssl-dev libcurl4-openssl-dev libevent-dev
 apt-get -y install module-init-tools
 
 modprobe kvm
