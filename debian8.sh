@@ -2,6 +2,7 @@
 #Locale
 LOCAL="Europe/Kiev"
 LOCALE="ru_RU.UTF-8"
+HDHOST=node0.cloud365.com.ua
 apt-get update; apt-get upgrade -y;
 apt-get -y install vim htop cron zip unzip wget curl mc sudo apache2-utils debconf-utils ipset debian-keyring fail2ban git
 gpg --keyserver pgp.mit.edu --recv-keys 1F41B907
@@ -18,4 +19,9 @@ dpkg-reconfigure -f noninteractive tzdata
 sed -i -e 's/"syntax on/syntax on\ncolorscheme ron\nset number/' /etc/vim/vimrc
 apt-get -y install bsdutils build-essential libaio1 libssl-dev libcurl4-openssl-dev libevent-dev sendmail-bin sensible-mda
 apt-get -y install module-init-tools
+
+modprobe kvm
+modprobe kvm_intel
+
+sed -i "s/Debian-82-jessie-64-minimal/Debian-82-jessie-64-minimal $HDHOST prox4m1.proxmox.com prox4m1 pvelocalhost/g" /etc/hosts
 
