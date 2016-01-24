@@ -1,5 +1,4 @@
-# proxmox-debian
-
+# Proxmox auto setup script for Debian 8
 Setup: <br>
 cd /opt<br>
 wget https://github.com/antonchernik/proxmox-debian/archive/master.zip<br>
