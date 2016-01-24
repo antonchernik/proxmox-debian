@@ -36,4 +36,8 @@ apt-get update && apt-get dist-upgrade
 apt-get install proxmox-ve ntp ssh postfix ksm-control-daemon open-iscsi
 apt-get remove linux-image-amd64 linux-image-3.16.0-4-amd64 linux-base
 update-grub
+
+
+cp /opt/proxmox-debian/iptables/init.sh /etc/network/if-pre-up.d/iptables
+chmod +x /etc/network/if-pre-up.d/iptables
 reboot
