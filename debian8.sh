@@ -40,4 +40,4 @@ update-grub
 
 #cp /opt/proxmox-debian/iptables/init.sh /etc/network/if-pre-up.d/iptables
 #chmod +x /etc/network/if-pre-up.d/iptables
-#reboot
+reboot
