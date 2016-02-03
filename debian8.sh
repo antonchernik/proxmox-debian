@@ -18,8 +18,8 @@ echo $LOCAL > /etc/timezone && \
 dpkg-reconfigure -f noninteractive tzdata
 
 sed -i -e 's/"syntax on/syntax on\ncolorscheme ron\nset number/' /etc/vim/vimrc
-sed -i "s/Debian-82-jessie-64-minimal/Debian-82-jessie-64-minimal $HDHOST prox4m1.proxmox.com prox4m1 pvelocalhost/g" /etc/hosts
-sed -i "s/Debian-82-jessie-64-minimal/$HDHOST/g" /etc/hostname
+sed -i "s/Debian-83-jessie-64-minimal/Debian-83-jessie-64-minimal $HDHOST prox4m1.proxmox.com prox4m1 pvelocalhost/g" /etc/hosts
+sed -i "s/Debian-83-jessie-64-minimal/$HDHOST/g" /etc/hostname
 sed -i "s/Port 22/Port $SSHD_PORT/g" /etc/ssh/sshd_config
 sed -i "s/PermitRootLogin yes/PermitRootLogin no/g" /etc/ssh/sshd_config
 apt-get -y install bsdutils build-essential libaio1 libssl-dev libcurl4-openssl-dev libevent-dev
